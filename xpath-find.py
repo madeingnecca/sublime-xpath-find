@@ -16,12 +16,10 @@ class XPathFindCommand(sublime_plugin.TextCommand):
 	def on_input_change(self, value):
 		self.query_last = value
 		self.xpath_find(value, False)
-		pass
 
 	def on_input_cancel(self, value):
 		# Free memory
 		self.xml_tree = None
-		pass
 
 	def xpath_find(self, expr, parse = True):
 
